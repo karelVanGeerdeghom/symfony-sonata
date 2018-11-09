@@ -81,7 +81,7 @@
         ],
         "post-create-project-cmd": [
             "php -r \"copy('fos_user.yaml', 'config/packages/fos_user.yaml');\""
-        ],
+        ]
     },
     "conflict": {
         "symfony/symfony": "*"
