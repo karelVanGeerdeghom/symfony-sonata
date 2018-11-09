@@ -70,7 +70,6 @@
     },
     "scripts": {     
         "auto-scripts": {
-            "php -r \"rename('fos_user.yaml', 'config/packages/fos_user.yaml');\"",
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
@@ -79,7 +78,10 @@
         ],
         "post-update-cmd": [
             "@auto-scripts"
-        ]
+        ],
+        "post-create-project-cmd": [
+            "php -r \"copy('fos_user.yaml', 'config/packages/fos_user.yaml');\""
+        ],
     },
     "conflict": {
         "symfony/symfony": "*"
