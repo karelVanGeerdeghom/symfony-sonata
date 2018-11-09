@@ -1,0 +1,12 @@
+fos_user:
+    db_driver: orm # other valid values are 'mongodb' and 'couchdb'
+    firewall_name: main
+    user_class: App\McDo\Domain\Model\User\User
+    from_email:
+        address: "symfony@duo.be"
+        sender_name: "Duo"
+    resetting:
+        email:
+            from_email:
+                address: "symfony@duo.be"
+                sender_name: "Duo"
