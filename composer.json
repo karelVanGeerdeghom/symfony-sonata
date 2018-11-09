@@ -69,6 +69,9 @@
         "symfony/polyfill-php56": "*"
     },
     "scripts": {
+        "post-create-project-cmd": [
+            "php -r \"rename('fos_user.yaml', 'config/packages/fos_user.yaml');\""
+        ],        
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
